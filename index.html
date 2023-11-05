@@ -1,22 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="output.css" rel="stylesheet">
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-
   <script src="script.js" defer></script>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+
   <style>
     .card {
       width: 300px;
@@ -27,7 +18,7 @@
 <body>
 
   <div class="navbar bg-gray-700 py-2 flex justify-between px-10">
-    <a class="btn btn-ghost text-lg">Buy Product Online</a>
+    <a class="btn btn-ghost text-lg text-white">Buy Product Online</a>
     <label class="swap swap-rotate">
       <!-- this hidden checkbox controls the state -->
       <input type="checkbox" />
@@ -51,93 +42,28 @@
     <!-- Product side -->
     <div class="product-side">
       <h2 class=" mb-5 text-lg font-semibold">Products</h2>
-      <div class="product-wrapper flex flex-wrap gap-4">
-        <!-- Product Card -->
-        <div class="card  shadow-lg text-center overflow-hidden">
-          <img
-            src="https://media.istockphoto.com/id/1350560575/photo/pair-of-blue-running-sneakers-on-white-background-isolated.webp?b=1&s=170667a&w=0&k=20&c=liUSgX6SafJ7HWvefFqR9-pnf3KuH6v1lwQ6iEpePWc="
-            alt="Shoes" class="w-full h-40 object-cover">
-          <div class="card-body p-4 ">
-            <h2 class="card-title text-xl font-semibold mx-auto mb-2">Shoes</h2>
-            <p>Price <span>200</span></p>
-            <div class="btn-group mx-auto mt-2">
-              <button class="btn btn-sm text-xl">-</button>
-              <button class="btn btn-sm ">0</button>
-              <button class="btn btn-sm text-xl">+</button>
-            </div>
-          </div>
-        </div>
-<!-- Product Card -->
-        <div class="card  shadow-lg text-center overflow-hidden">
-          <img
-            src="https://media.istockphoto.com/id/1350560575/photo/pair-of-blue-running-sneakers-on-white-background-isolated.webp?b=1&s=170667a&w=0&k=20&c=liUSgX6SafJ7HWvefFqR9-pnf3KuH6v1lwQ6iEpePWc="
-            alt="Shoes" class="w-full h-40 object-cover">
-          <div class="card-body p-4 ">
-            <h2 class="card-title text-xl font-semibold mx-auto mb-2">Shoes</h2>
-            <p>Price <span>200</span></p>
-            <div class="btn-group mx-auto mt-2">
-              <button class="btn btn-sm text-xl">-</button>
-              <button class="btn btn-sm ">0</button>
-              <button class="btn btn-sm text-xl">+</button>
-            </div>
-          </div>
-        </div>
-<!-- Product Card -->
-        <div class="card  shadow-lg text-center overflow-hidden">
-          <img
-            src="https://media.istockphoto.com/id/1350560575/photo/pair-of-blue-running-sneakers-on-white-background-isolated.webp?b=1&s=170667a&w=0&k=20&c=liUSgX6SafJ7HWvefFqR9-pnf3KuH6v1lwQ6iEpePWc="
-            alt="Shoes" class="w-full h-40 object-cover">
-          <div class="card-body p-4 ">
-            <h2 class="card-title text-xl font-semibold mx-auto mb-2">Shoes</h2>
-            <p>Price <span>200</span></p>
-            <div class="btn-group mx-auto mt-2">
-              <button class="btn btn-sm text-xl">-</button>
-              <button class="btn btn-sm ">0</button>
-              <button class="btn btn-sm text-xl">+</button>
-            </div>
-          </div>
-        </div>
-<!-- Product Card -->
-        <div class="card  shadow-lg text-center overflow-hidden">
-          <img
-            src="https://media.istockphoto.com/id/1350560575/photo/pair-of-blue-running-sneakers-on-white-background-isolated.webp?b=1&s=170667a&w=0&k=20&c=liUSgX6SafJ7HWvefFqR9-pnf3KuH6v1lwQ6iEpePWc="
-            alt="Shoes" class="w-full h-40 object-cover">
-          <div class="card-body p-4 ">
-            <h2 class="card-title text-xl font-semibold mx-auto mb-2">Shoes</h2>
-            <p>Price <span>200</span></p>
-            <div class="btn-group mx-auto mt-2">
-              <button class="btn btn-sm text-xl">-</button>
-              <button class="btn btn-sm ">0</button>
-              <button class="btn btn-sm text-xl">+</button>
-            </div>
-          </div>
-        </div>
-
-
+      <div class="product-wrapper flex flex-wrap gap-4" id="product-wrapper">
+        <!-- products will come dynamically -->
       </div>
     </div>
 
     <!-- Cart Wrapper -->
-    <div class="cart-wrapper  w-1/4">
-      <h2 class="text-2xl font-semibold mb-4">Cart</h2>
-      <div class="cart-item mb-4">
-        <div class="flex justify-between items-center">
-          <span class="font-semibold">Shoes</span>
-          <div class="">
-            <span class="font-semibold"><span id="quantity">5</span> <span>x</span></span>
-            <span class="font-semibold">300</span>
-          </div>
-
-
+    <div class="cart-section  w-1/4 shadow-md ">
+      <h2 class="text-2xl font-semibold bg-green-500">Cart</h2>
+      <hr class="mb-4 mt-2">
+      <div id="cart-inner" class="mb-4 hidden">
+        <div id="cart-wrapper" class=" ">
+          <!-- product will come dynamically -->
         </div>
+
         <hr class="my-3">
         <div class="total-wrapper flex justify-between font-semibold">
           <span class=" alise">Total</span>
           <span id="total">1500</span>
         </div>
+        <button class="btn btn-primary w-full mt-4">Checkout</button>
       </div>
-      <!-- Add more cart items here -->
-      <button class="btn btn-primary w-full">Checkout</button>
+      <p id="no-cartItem" class="hidden">There is no Product in Cart !</p>
     </div>
   </main>
 </body>

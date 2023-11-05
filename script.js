@@ -27,13 +27,30 @@ const Products = [
     id: 3,
     name: "T-shirt",
     price: 300,
-    totalPrice: 1500,
-    quantity: 5,
+    totalPrice: 0,
+    quantity: 0,
     image: "https://m.media-amazon.com/images/I/81wFLUDzAbL._AC_UL320_.jpg",
+  },
+  {
+    id: 4,
+    name: "Kurta",
+    price: 2000,
+    totalPrice: 0,
+    quantity: 0,
+    image: "https://m.media-amazon.com/images/I/51vA9e2vmcL._AC_UL320_.jpg",
+  },
+  {
+    id: 5,
+    name: "Watch",
+    price: 10000,
+    totalPrice: 0,
+    quantity: 0,
+    image: "https://m.media-amazon.com/images/I/61LO6l4zB4L._AC_UL320_.jpg",
   },
 ];
 
 let cart = [];
+
 
 const product_wrapper = document.getElementById("product-wrapper");
 const action_btn = document.getElementsByClassName("action-btn");
@@ -118,4 +135,16 @@ product_wrapper.addEventListener('click', (e) => {
     }
   }
 })
+
+const themeBtn = document.getElementById("themeBtn");
+
+themeBtn.addEventListener("click", (event) =>{
+  event.preventDefault();
+
+  const currentTheme = document.documentElement.getAttribute("data-theme");
+  const newTheme = currentTheme === "light" ? "dark" : "light";
+
+  document.documentElement.setAttribute("data-theme", newTheme);
+});
+
 
